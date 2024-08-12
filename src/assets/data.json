@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Project One",
+    "description": "Description of Project One",
+    "technologies": ["React", "Springboot"]
+  },
+  {
+    "id": 2,
+    "name": "Project Two",
+    "description": "Description of Project Two",
+    "technologies": ["Angular", ".NET"]
+  }
+]

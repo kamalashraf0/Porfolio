@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+    <h1 class="text-5xl font-bold mb-6 text-center">My Portfolio</h1>
+    <p class="text-lg text-gray-700 mb-6 text-center">Here are some of my recent projects. Click on any project to view more details.</p>
+    <app-project-list></app-project-list>
+
+    <div class="flex flex-col min-h-screen">
+      <div class="flex-grow">
+        <div class="home-container">
+          <div class="main-content animate__animated animate__fadeInUp flex flex-col items-center">
+            <div class="thumb-container mb-4">
+              <img src="assets/images/myprofile.png" alt="Profile image" class="thumb-image rounded-full shadow-lg w-40 h-40 transform transition duration-300 hover:scale-105">
+            </div>
+            <div class="text-container text-center">
+              <p class="text-3xl font-bold mb-2">Project: BulkyBook</p>
+              <img src="assets/images/bulky.png" alt="BulkyBook Project" class="w-full h-64 object-cover rounded-lg shadow-md mb-4 transform transition duration-300 hover:scale-105">
+              <p class="text-gray-700 mb-4">Developed a dynamic web application utilizing ASP .NET Core MVC framework integrated with Entity Framework Core for database operations. Implemented CRUD operations on a category form, interacting with SQL Server backend to manage data effectively. Employed C#, HTML, CSS, and JavaScript (including Toaster JS for client-side notifications) to build a responsive and visually appealing user interface. Ensured data integrity and security through client and server-side validation techniques. This project demonstrates proficiency in full-stack web development, utilizing modern technologies and best practices to deliver a robust and user-friendly application.</p>
+              <a href="https://github.com/kamalashraf0/BulkyBookWEB" target="_blank" class="text-blue-500 hover:underline">View on GitHub</a>
+            </div>
+          </div>
+
+          <div class="main-content animate__animated animate__fadeInUp flex flex-col items-center mt-8">
+            <div class="text-container text-center">
+              <p class="text-3xl font-bold mb-2">Project: Brain Tumor Detection using Neural Networks</p>
+              <img src="assets/images/network.png" alt="Brain Tumor Detection Project" class="w-full h-64 object-cover rounded-lg shadow-md mb-4 transform transition duration-300 hover:scale-105">
+              <p class="text-gray-700 mb-4">Developed an advanced neural network model for the detection of brain tumors as part of my graduation project. Utilized a training set comprising 70% of available data and a testing set of 30% to validate the model's performance robustness. Achieved exceptional accuracy of 98% utilizing transfer learning with the VGG16 architecture. This project exemplifies my proficiency in machine learning, image processing, and collaborative problem-solving.</p>
+              <a href="https://github.com/kamalashraf0/Brain_Tumor_Classifier" target="_blank" class="text-blue-500 hover:underline">View on GitHub</a>
+            </div>
+          </div>
+
+          <div class="main-content animate__animated animate__fadeInUp flex flex-col items-center mt-8">
+            <div class="text-container text-center">
+              <p class="text-3xl font-bold mb-2">Project: Angular E-commerce Application</p>
+              <img src="assets/images/e_com.png" alt="E-commerce Project" class="w-full h-64 object-cover rounded-lg shadow-md mb-4 transform transition duration-300 hover:scale-105">
+              <p class="text-gray-700 mb-4">Developed a full-featured E-commerce application using Angular 18, featuring key components: Responsive navbar, footer, item listings, user login/signout, and a shopping cart. Data Management: Integrated a local JSON file for product data. Advanced Features: Utilized RxJS to manage operations and Angular decorators and modules for a structured codebase. Responsive Design: Ensured a seamless user experience across all devices.</p>
+              <a href="https://github.com/kamalashraf0/E_Commerce-Angular-18-Project" target="_blank" class="text-blue-500 hover:underline">View on GitHub</a>
+            </div>
+          </div>
+
+          <div id="skills-section" class="skills-section animate__animated animate__fadeInUp mt-8">
+            <p class="text-4xl font-bold text-purple-700 mb-6 text-center">My Skills</p>
+            <div class="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="border p-4 rounded shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white transform transition duration-300 hover:scale-105">
+                <p class="text-purple-700 text-xl font-semibold">Angular</p>
+                <p class="text-gray-700">Helps developers build dynamic, single-page web applications.</p>
+                <a href="https://angular.io/" target="_blank" class="bg-purple-700 text-white py-2 px-4 rounded hover:bg-purple-800 transition duration-300 mt-2 inline-block text-center">Know More</a>
+              </div>
+
+              <div class="border p-4 rounded shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white transform transition duration-300 hover:scale-105">
+                <p class="text-purple-700 text-xl font-semibold">ReactJS</p>
+                <p class="text-gray-700">JS library for building user interfaces, particularly for SPAs.</p>
+                <a href="https://reactjs.org/" target="_blank" class="bg-purple-700 text-white py-2 px-4 rounded hover:bg-purple-800 transition duration-300 mt-2 inline-block text-center">Know More</a>
+              </div>
+
+              <div class="border p-4 rounded shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white transform transition duration-300 hover:scale-105">
+                <p class="text-purple-700 text-xl font-semibold">Java</p>
+                <p class="text-gray-700">Java is designed to be platform-independent.</p>
+                <a href="https://www.java.com/" target="_blank" class="bg-purple-700 text-white py-2 px-4 rounded hover:bg-purple-800 transition duration-300 mt-2 inline-block text-center">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.min.js" defer></script>
+</body>
+</html>
