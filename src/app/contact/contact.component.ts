@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TestComponent } from "../test/test.component";
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule ],
+  imports: [ReactiveFormsModule, TestComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

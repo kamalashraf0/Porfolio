@@ -1,0 +1,18 @@
+/* Ensure the html and body elements cover the full viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevent scrolling if the canvas is to cover the full viewport */
+}
+
+/* Style for the canvas element */
+#web-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place it behind other content */
+}

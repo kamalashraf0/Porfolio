@@ -4,12 +4,10 @@ import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-project-detail',
-  standalone: true,
-  imports: [],
-  templateUrl: './project-detail.component.html',
-  styleUrl: './project-detail.component.css'
+  templateUrl: './project-details.component.html',
+  styleUrls: ['./project-details.component.css']
 })
-export class ProjectDetailComponent implements OnInit {
+export class ProjectDetailsComponent implements OnInit {
   project: any;
 
   constructor(private route: ActivatedRoute, private dataService: DataService) { }

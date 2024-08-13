@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { RouterLink, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { ProjectDetailComponent } from "../project-detail/project-detail.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-project-list',
   standalone: true,
-  imports: [RouterLink, RouterModule, FormsModule, ProjectDetailComponent],
+  imports: [RouterLink, RouterModule, FormsModule , CommonModule],
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.css']
 })
