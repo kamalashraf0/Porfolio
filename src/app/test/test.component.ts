@@ -1,6 +1,7 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { TweenLite, Circ } from 'gsap';
 import { ProjectListComponent } from "../project-list/project-list.component";
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-test',
@@ -10,6 +11,14 @@ import { ProjectListComponent } from "../project-list/project-list.component";
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit, AfterViewInit {
+
+  isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
+
+
   private canvas!: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D | null = null;
   private points: any[] = [];
@@ -17,7 +26,10 @@ export class TestComponent implements OnInit, AfterViewInit {
   private animateHeader = true;
 
   ngOnInit(): void {
-    this.target = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
+      this.target = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
+
   }
 
   ngAfterViewInit(): void {
@@ -31,6 +43,7 @@ export class TestComponent implements OnInit, AfterViewInit {
     } else {
       console.error('Failed to get canvas context');
     }
+
   }
 
   private initHeader(): void {

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { FooterComponent } from "../footer/footer.component";
+import { TestComponent } from "../test/test.component";
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [FooterComponent, TestComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
