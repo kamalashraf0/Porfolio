@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { FooterComponent } from "./footer/footer.component";
 import { ProjectListComponent } from "./project-list/project-list.component";
@@ -13,4 +13,6 @@ import { ProjectListComponent } from "./project-list/project-list.component";
 })
 export class AppComponent {
   title = 'Porfolio';
+
+  
 }

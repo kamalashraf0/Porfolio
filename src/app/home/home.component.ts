@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { FooterComponent } from "../footer/footer.component";
 import { TestComponent } from "../test/test.component";
@@ -13,4 +13,5 @@ import { TestComponent } from "../test/test.component";
 })
 export class HomeComponent {
 
+  
 }

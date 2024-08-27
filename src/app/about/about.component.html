@@ -1,34 +1,42 @@
-<div class="relative flex items-center justify-center min-h-screen">
-  <app-test ></app-test>
-  <div class="about-me-container max-w-4xl mx-auto p-8 bg-white bg-opacity-60 shadow-md rounded-lg transform transition-all duration-300 hover:scale-105 animate__animated animate__fadeInUp">
+<div class="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-700 via-blue-800 to-indigo-900">
+  <canvas id="backgroundCanvas" class="absolute inset-0 w-full h-full"></canvas>
+  <div class="about-me-container max-w-3xl mx-auto p-10 bg-white bg-opacity-80 shadow-xl rounded-xl transform transition-all duration-300 hover:scale-105 animate__animated animate__fadeInUp z-10">
     <div class="main-content">
-      <div class="education-section mb-12">
-        <div id="education-section" class="animate__animated animate__fadeInUp mb-6">
-          <p class="text-2xl font-bold text-purple-700">Education</p>
-        </div>
-        <p class="text-lg text-gray-700">Al Shorouck Academy</p>
-        <p class="text-lg text-gray-700">Bachelor of Computer Science</p>
-        <p class="text-lg text-gray-700">2022</p>
+      <!-- Profile Section -->
+      <div class="profile-section mb-12 text-center">
+        <img src="assets/images/myprofile.png" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+        <h1 class="text-4xl font-bold text-gray-900">Kamal Ashraf Mohamed</h1>
+        <p class="text-lg text-gray-700">Full Stack Developer | (.NET | Angular)</p>
       </div>
 
-      <div class="projects-section">
-        <div id="projects-section" class="animate__animated animate__fadeInUp mb-6">
-          <p class="text-2xl font-bold text-purple-700">Projects</p>
+      <!-- Education Section -->
+      <div class="education-section mb-12">
+        <div id="education-section" class="animate__animated animate__fadeInUp mb-6">
+          <p class="text-3xl font-bold text-purple-700 text-center">Education</p>
         </div>
+        <p class="text-lg text-gray-900 text-center">Al Shorouck Academy</p>
+        <p class="text-lg text-gray-900 text-center">Bachelor of Computer Science</p>
+        <p class="text-lg text-gray-900 text-center">2022</p>
+      </div>
 
-        <div class="project-card bg-gray-100 p-6 rounded-lg shadow-md mb-6 hover:shadow-lg transform transition-all duration-300 hover:scale-105">
-          <h4 class="text-xl font-semibold text-purple-700">Project Name</h4>
-          <p class="text-gray-700">Project description goes here. This is a brief overview of what the project entails and its key features.</p>
+      <!-- Links Section -->
+      <div class="links-section">
+        <div id="links-section" class="animate__animated animate__fadeInUp mb-6">
+          <p class="text-3xl font-bold text-purple-700 text-center">Connect with Me</p>
         </div>
-
-        <div class="project-card bg-gray-100 p-6 rounded-lg shadow-md mb-6 hover:shadow-lg transform transition-all duration-300 hover:scale-105">
-          <h4 class="text-xl font-semibold text-purple-700">Project Name</h4>
-          <p class="text-gray-700">Project description goes here. This is a brief overview of what the project entails and its key features.</p>
-        </div>
-
-        <div class="project-card bg-gray-100 p-6 rounded-lg shadow-md mb-6 hover:shadow-lg transform transition-all duration-300 hover:scale-105">
-          <h4 class="text-xl font-semibold text-purple-700">Project Name</h4>
-          <p class="text-gray-700">Project description goes here. This is a brief overview of what the project entails and its key features.</p>
+        <div class="flex justify-center space-x-8">
+          <a href="https://linkedin.com/in/kamal--ashraf" target="_blank" class="text-blue-600 hover:underline">
+            <img src="assets/images/Linkedin.png" alt="LinkedIn" class="w-10 h-10">
+          </a>
+          <a href="https://github.com/kamalashraf0" target="_blank" class="text-gray-900 hover:underline">
+            <img src="assets/images/git.png" alt="GitHub" class="w-10 h-10">
+          </a>
+          <a href="mailto:kamalashrafmo@gmail.com" class="text-red-600 hover:underline">
+            <img src="assets/images/gmail.png" alt="Email" class="w-10 h-10">
+          </a>
+          <a href="https://www.upwork.com/freelancers/~01043b604a8784a85f" target="_blank" class="text-indigo-600 hover:underline">
+            <img src="assets/images/up.png" alt="Portfolio" class="w-10 h-10">
+          </a>
         </div>
       </div>
     </div>

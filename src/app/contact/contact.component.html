@@ -1,28 +1,31 @@
-<div class="relative flex items-center justify-center min-h-screen">
+<div class="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-900">
   <app-test></app-test>
-    <div class="form-container max-w-lg mx-auto p-6 bg-white bg-opacity-50 shadow-md rounded-lg transform transition-all duration-300 hover:scale-105 animate__animated animate__fadeInUp">
-    <p class="text-center text-3xl font-bold mb-6 text-blue-800 animate-pulse">Contact</p>
-    <form [formGroup]="userForm" class="space-y-6">
+
+  <div class="form-container max-w-2xl mx-auto p-10 bg-white bg-opacity-70 shadow-2xl rounded-2xl transform transition-all duration-300 hover:scale-105 animate__animated animate__fadeInUp">
+    <p class="text-center text-4xl font-bold mb-8 text-purple-900 animate-pulse">Contact Me</p>
+
+    <form [formGroup]="userForm" class="space-y-8">
       <div>
-        <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
-        <input type="text" id="name" formControlName="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500">
-        <div *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name').touched" class="text-red-500 text-sm mt-1">Name is required</div>
+        <label for="name" class="block text-sm font-medium text-gray-800">Name:</label>
+        <input type="text" id="name" formControlName="name" class="mt-1 block w-full p-3 border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+        <div *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name').touched" class="text-red-600 text-sm mt-1">Name is required</div>
       </div>
 
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
-        <input type="email" id="email" formControlName="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500">
+        <label for="email" class="block text-sm font-medium text-gray-800">Email:</label>
+        <input type="email" id="email" formControlName="email" class="mt-1 block w-full p-3 border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+        <div *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email').touched" class="text-red-600 text-sm mt-1">Email is required</div>
+        <div *ngIf="userForm.get('email')?.hasError('email') && userForm.get('email').touched" class="text-red-600 text-sm mt-1">Please enter a valid email</div>
       </div>
 
       <div>
-        <label for="message" class="block text-sm font-medium text-gray-700">Message:</label>
-        <textarea id="message" formControlName="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"></textarea>
+        <label for="message" class="block text-sm font-medium text-gray-800">Message:</label>
+        <textarea id="message" formControlName="message" rows="5" class="mt-1 block w-full p-3 border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+        <div *ngIf="userForm.get('message')?.hasError('required') && userForm.get('message').touched" class="text-red-600 text-sm mt-1">Message is required</div>
       </div>
 
-      <button (click)="onSubmit()" class="w-full bg-purple-700 text-white py-2 px-4 rounded hover:bg-purple-800 transition duration-300 transform hover:scale-105">Submit</button>
+      <button (click)="onSubmit()" class="w-full bg-purple-700 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105">Submit</button>
     </form>
   </div>
 </div>
 <div><app-footer></app-footer></div>
-
-
