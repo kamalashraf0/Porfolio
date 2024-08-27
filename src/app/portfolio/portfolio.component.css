@@ -1,8 +1,26 @@
-.projects-section {
-  transition: transform 0.3s, box-shadow 0.3s;
+.intro-section {
+  background: url("/assets/images/back.png") no-repeat center center/cover;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-
-.projects-section:hover {
+.intro-section h1, .intro-section p, .intro-section a {
+  transition: transform 0.3s ease-in-out;
+}
+.intro-section h1:hover, .intro-section p:hover, .intro-section a:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-section img {
+    margin-bottom: 20px;
+  }
+}
+.projects-section {
+  background: #c3c9ce;
+}
+.skills-section {
+  background: #fbfcfd;
 }

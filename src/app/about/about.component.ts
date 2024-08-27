@@ -111,7 +111,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
     }
 
     function animate() {
-      ctx!.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Create trails
+      ctx!.fillStyle = 'rgba(0, 0, 0, 1)';
       ctx!.fillRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
