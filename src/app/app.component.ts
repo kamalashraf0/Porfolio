@@ -12,7 +12,7 @@ import { ProjectListComponent } from "./project-list/project-list.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Porfolio';
+  title = 'Kamal Ashraf Portfolio';
 
-  
+
 }

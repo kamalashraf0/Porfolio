@@ -5,13 +5,13 @@ import { TestComponent } from "../test/test.component";
 import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-test2',
   standalone: true,
   imports: [FooterComponent, TestComponent, NavbarComponent],
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  templateUrl: './test2.component.html',
+  styleUrl: './test2.component.css'
 })
-export class AboutComponent implements OnInit, AfterViewInit {
+export class Test2Component implements OnInit, AfterViewInit {
   projects: any[] = [];
   filteredProjects: any[] = [];
   searchTerm: string = '';
@@ -51,7 +51,6 @@ export class AboutComponent implements OnInit, AfterViewInit {
       size: number;
       speedX: number;
       speedY: number;
-      color: string;
 
       constructor() {
         this.x = Math.random() * canvas.width;
@@ -59,48 +58,21 @@ export class AboutComponent implements OnInit, AfterViewInit {
         this.size = Math.random() * 5 + 1;
         this.speedX = Math.random() * 3 - 1.5;
         this.speedY = Math.random() * 3 - 1.5;
-        this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
       }
 
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        // Bounce particles off the edges
-        if (this.x + this.size > canvas.width || this.x - this.size < 0) {
-          this.speedX = -this.speedX;
-        }
-        if (this.y + this.size > canvas.height || this.y - this.size < 0) {
-          this.speedY = -this.speedY;
-        }
+        if (this.size > 0.2) this.size -= 0.1;
       }
 
       draw() {
-        ctx!.fillStyle = this.color;
+        ctx!.fillStyle = 'rgba(255, 255, 255, 0.8)';
         ctx!.beginPath();
         ctx!.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx!.closePath();
         ctx!.fill();
-      }
-    }
-
-    function connectParticles() {
-      for (let a = 0; a < particlesArray.length; a++) {
-        for (let b = a; b < particlesArray.length; b++) {
-          const dx = particlesArray[a].x - particlesArray[b].x;
-          const dy = particlesArray[a].y - particlesArray[b].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 100) {
-            ctx!.strokeStyle = 'rgba(255, 255, 255, 0.1)';
-            ctx!.lineWidth = 1;
-            ctx!.beginPath();
-            ctx!.moveTo(particlesArray[a].x, particlesArray[a].y);
-            ctx!.lineTo(particlesArray[b].x, particlesArray[b].y);
-            ctx!.stroke();
-            ctx!.closePath();
-          }
-        }
       }
     }
 
@@ -111,25 +83,16 @@ export class AboutComponent implements OnInit, AfterViewInit {
     }
 
     function animate() {
-      ctx!.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Create trails
-      ctx!.fillRect(0, 0, canvas.width, canvas.height);
+      ctx!.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
         particlesArray[i].draw();
       }
-      connectParticles();
       requestAnimationFrame(animate);
     }
-
-    window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      particlesArray.length = 0;
-      init();
-    });
 
     init();
     animate();
   }
-
 }
+

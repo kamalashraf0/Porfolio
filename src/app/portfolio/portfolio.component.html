@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -22,8 +23,10 @@
   </style>
 </head>
 <body class="bg-gray-100">
+
   <!-- Introduction Section -->
   <section class="intro-section flex items-center justify-between p-12 text-white intro-section animate__animated animate__fadeInUp" data-aos="fade-up">
+    <app-test2></app-test2>
     <div class="w-1/2">
       <img src="assets/images/myprofile.png" alt="Profile image" class="w-full h-full object-cover rounded-full shadow-lg">
     </div>
@@ -39,6 +42,7 @@
 
   <!-- Projects Section -->
   <section class="projects-section py-12 bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white projects-section animate__animated animate__fadeInUp" data-aos="fade-up">
+    <app-test2></app-test2>
     <div class="container mx-auto px-4">
       <h2 class="text-5xl font-extrabold text-center mb-12 animate__animated animate__fadeInDown">Projects</h2>
       <div class="flex justify-center">
@@ -74,6 +78,7 @@
 
   <!-- Skills Section -->
   <section class="skills-section py-12 skills-section animate__animated animate__fadeInUp" data-aos="fade-up">
+    <app-test2></app-test2>
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-8">My Skills</h2>
       <div class="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -104,13 +109,11 @@
   (click)="scrollToTop()">
   ↑
 </button>
+<!-- <button (click)="toggleDarkMode()" class="fixed top-5 right-5 bg-gray-700 text-white p-2 rounded-full">
+  Toggle Dark Mode
+</button> -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
 </body>
 </html>
 <app-footer></app-footer>
